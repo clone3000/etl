@@ -1,0 +1,17 @@
+[2026-01-31T06:59:07.686+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-01-31T06:59:07.715+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pets_json_to_table.extract manual__2026-01-31T06:59:05.285279+00:00 [queued]>
+[2026-01-31T06:59:07.722+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pets_json_to_table.extract manual__2026-01-31T06:59:05.285279+00:00 [queued]>
+[2026-01-31T06:59:07.722+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-01-31T06:59:07.734+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract> on 2026-01-31 06:59:05.285279+00:00
+[2026-01-31T06:59:07.737+0000] {standard_task_runner.py:64} INFO - Started process 50 to run task
+[2026-01-31T06:59:07.740+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'pets_json_to_table', 'extract', 'manual__2026-01-31T06:59:05.285279+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/pets_json_to_table.py', '--cfg-path', '/tmp/tmpr_xdwx9u']
+[2026-01-31T06:59:07.743+0000] {standard_task_runner.py:91} INFO - Job 29: Subtask extract
+[2026-01-31T06:59:07.802+0000] {task_command.py:426} INFO - Running <TaskInstance: pets_json_to_table.extract manual__2026-01-31T06:59:05.285279+00:00 [running]> on host 6a27e7178903
+[2026-01-31T06:59:08.031+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='student_name' AIRFLOW_CTX_DAG_ID='pets_json_to_table' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2026-01-31T06:59:05.285279+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-31T06:59:05.285279+00:00'
+[2026-01-31T06:59:08.032+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-01-31T06:59:08.053+0000] {python.py:237} INFO - Done. Returned value was: {'pets': [{'name': 'Purrsloud', 'species': 'Cat', 'favFoods': ['wet food', 'dry food', '<strong>any</strong> food'], 'birthYear': 2016, 'photo': 'https://learnwebcode.github.io/json-example/images/cat-2.jpg'}, {'name': 'Barksalot', 'species': 'Dog', 'birthYear': 2008, 'photo': 'https://learnwebcode.github.io/json-example/images/dog-1.jpg'}, {'name': 'Meowsalot', 'species': 'Cat', 'favFoods': ['tuna', 'catnip', 'celery'], 'birthYear': 2012, 'photo': 'https://learnwebcode.github.io/json-example/images/cat-1.jpg'}]}
+[2026-01-31T06:59:08.053+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-01-31T06:59:08.077+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=pets_json_to_table, task_id=extract, run_id=manual__2026-01-31T06:59:05.285279+00:00, execution_date=20260131T065905, start_date=20260131T065907, end_date=20260131T065908
+[2026-01-31T06:59:08.114+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-01-31T06:59:08.136+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-01-31T06:59:08.138+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
